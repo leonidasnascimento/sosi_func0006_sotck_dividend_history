@@ -59,7 +59,7 @@ def main(func: func.TimerRequest) -> None:
             
         # Wait 'till all threads are done
         for thread in thread_lst:
-            if thread and thread.is_alive():
+            if thread and thread.is_alive():    
                 thread.join()
 
         logging.info("Timer job is done. Waiting for the next execution time")
